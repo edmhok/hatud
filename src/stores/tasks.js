@@ -11,7 +11,20 @@ const DEFAUL_DATA = [
     const {subscribe} = taskList;
 
     return {
-      subscribe
+      subscribe,
+      updateTask: (task, listIdx) => {
+        taskList.update(list => {
+          const taskIdx = list[listIdx].items.findIndex(item => item.id === task.id);
+          
+          if(taskIdx > -1) {
+            list[listIdx].items[taskIdx] = {...task};
+          }
+          return list;
+        })
+      },
+      addList: () => {
+        alert("Adding!");
+      }
     };
 }
 
