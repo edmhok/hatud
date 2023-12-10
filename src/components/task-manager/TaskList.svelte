@@ -1,4 +1,5 @@
 <script>
+	import { taskListStore } from '../../stores/tasks';
 	import TaskItem from './TaskItem.svelte';
 	// import { taskListStore } from '../../stores/tasks';
 	// import { onDestroy } from 'svelte';
@@ -39,6 +40,8 @@
 				<TaskItem {task} {listIdx} />
 			{/each}
 		</div>
-		<button class="underline flex p-2"> + Add Task </button>
+		<button on:click={() => taskListStore.addTask(listIdx)} class="underline flex p-2">
+			+ Add Task
+		</button>
 	</div>
 </div>

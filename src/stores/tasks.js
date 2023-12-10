@@ -8,7 +8,7 @@ const DEFAUL_DATA = [
 
   function createStore() {
     const taskList = writable(DEFAUL_DATA);     
-    const {subscribe} = taskList;
+    const {subscribe, update} = taskList;
 
     return {
       subscribe,
@@ -23,7 +23,26 @@ const DEFAUL_DATA = [
         })
       },
       addList: () => {
-        alert("Adding!");
+        update((list) => [...list, {
+          id: new Date().toISOString(),
+          text: "New List",
+          items: []
+        }
+      ])
+    },
+    addTask: (listIdx) => {
+      update((list) => {
+        const {items} = list[listIdx];
+
+        list[listIdx].items = [
+          ...items, {
+            id: new Date().toISOString(),
+            text: "What to do?"
+          }
+        ];
+
+        return list;
+      })
       }
     };
 }
