@@ -10,7 +10,13 @@
 	function updateTask(event) {
 		const taskIdx = $taskListStore[listIdx].items.findIndex((item) => item.id === task.id);
 		if (taskIdx > -1) {
-			alert(`Update task idx: ${taskIdx}`);
+			taskListStore.update((list) => {
+				list[listIdx].items[taskIdx] = {
+					id: task.id,
+					text: event.detail.taskText
+				};
+				return list;
+			});
 		}
 	}
 </script>
