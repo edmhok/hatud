@@ -11,29 +11,7 @@ const DEFAUL_DATA = [
     const {subscribe} = taskList;
 
     return {
-      subscribe,
-      updateTask: (task, listIdx) => {
-        // const taskIdx = get(taskList)[listIdx].items.findIndex(item => item.id === task.id);
-  
-        // if (taskIdx > -1) {
-        //   taskList.update(list => {
-        //     list[listIdx].items[taskIdx] = {...task};
-        //     return list;
-        //   })
-        // }
-  
-        // -------
-  
-        taskList.update(list => {
-          const taskIdx = list[listIdx].items.findIndex(item => item.id === task.id);
-  
-          if (taskIdx > -1) {
-            list[listIdx].items[taskIdx] = {...task};  
-          }
-  
-          return list;
-        })
-      }
+      subscribe
     };
 }
 
