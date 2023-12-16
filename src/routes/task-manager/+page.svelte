@@ -15,7 +15,7 @@
 		<div class="flex-it flex-row rounded-xl h-full">
 			<!-- TASK LIST START -->
 			{#each $taskListStore as list, listIdx (list.id)}
-				<TaskList listName={list.text} tasks={list.items} {listIdx} />
+				<TaskList {list} {listIdx} />
 			{/each}
 			<!-- TASK LIST END -->
 		</div>
