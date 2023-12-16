@@ -57,6 +57,9 @@ const DEFAULT_DATA = [
           list[moveToListIdx].items.push(task);
           return list;
         })
+      },
+      removeTask: () => {
+        alert("Removing task!");
       }
     };
 }
