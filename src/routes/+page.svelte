@@ -1,7 +1,11 @@
-<h1 class="text-3xl font-bold underline text-red-300">Hello world!</h1>
+<script>
+	console.log('Calling Page!');
+	export let data;
+</script>
 
-<style lang="postcss">
-	:global(html) {
-		background-color: theme(colors.gray.100);
-	}
-</style>
+<h1 class="text-3xl font-bold underline text-red-300">
+	Hello world!
+	<div>
+		{data.test1} - {data.test2}
+	</div>
+</h1>

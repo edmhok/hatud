@@ -1,9 +1,14 @@
 <script>
+	console.log('Calling Page!');
 	import TaskList from '../../components/task-manager/TaskList.svelte';
 	import { taskListStore } from '../../stores/tasks';
+	export let data;
 </script>
 
 <div class="p-10 h-full flex-it">
+	<div class="text-white text-2xl mb-6">
+		{data.appName} - {data.content}
+	</div>
 	<div class="text-white text-2xl mb-6">Some List</div>
 	<button
 		on:click={taskListStore.addList}
