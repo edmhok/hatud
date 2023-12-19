@@ -36,7 +36,7 @@
 				<div class="flex items-end hover:text-red-600">
 					<button
 						on:click|stopPropagation={() => {
-							taskListStore.removeTask();
+							taskListStore.removeTask(listIdx, taskIdx);
 						}}
 					>
 						<svg
