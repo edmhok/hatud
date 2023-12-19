@@ -4,6 +4,7 @@
 	import TiCogOutline from 'svelte-icons/ti/TiCogOutline.svelte';
 	import TiBell from 'svelte-icons/ti/TiBell.svelte';
 	import TiZoomOutline from 'svelte-icons/ti/TiZoomOutline.svelte';
+	import TiSocialFlickr from 'svelte-icons/ti/TiSocialFlickr.svelte';
 </script>
 
 <div class="w-full h-full bg-gray-900 text-gray-100">
@@ -110,6 +111,28 @@
 						</div>
 						<!-- PROFILE MENU -->
 						<div class="flex-it my-3 hover:cursor-pointer">
+							<div
+								class="flex-it items-center flex-row p-3 rounded-3xl hover:bg-gray-800 hover:rounded-3xl transition duration-200 cursor-pointer"
+							>
+								<div class="flex-it">
+									<div class="w-10 h-10 overflow-visible">
+										<img
+											alt=""
+											class="rounded-full"
+											src="https://www.pinclipart.com/picdir/middle/133-1331433_free-user-avatar-icons-happy-flat-design-png.png"
+										/>
+									</div>
+								</div>
+								<div class="flex-it xl:flex hidden flex-grow flex-row justify-between items-center">
+									<div class="flex-it mx-3 font-bold">Filip99</div>
+									<div class="flex-it">
+										<div class="icon">
+											<TiSocialFlickr />
+										</div>
+										<!-- <FiMoreHorizontal /> -->
+									</div>
+								</div>
+							</div>
 							<!-- <UserSettingPopup /> -->
 						</div>
 					</div>
