@@ -68,7 +68,7 @@
 				</div>
 			</Editable>
 		</div>
-		<div class="overflow-x-hidden overflow-y-auto with-scrollbar p-2">
+		<div class="overflow-x-hidden overflow-y-auto p-2">
 			{#each list.items as task, taskIdx (task.id)}
 				<div out:fade in:fly={{ y: 200 }} animate:flip>
 					<TaskItem {task} {listIdx} {taskIdx} />
