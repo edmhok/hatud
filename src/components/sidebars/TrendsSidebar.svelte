@@ -1,4 +1,5 @@
 <script>
+	export let trends;
 </script>
 
 <div class="bg-gray-800 overflow-hidden flex-it rounded-2xl">
