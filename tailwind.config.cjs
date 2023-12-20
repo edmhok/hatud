@@ -28,5 +28,8 @@ export default {
         "1": "1px"
       }
     }
-  }
+  },
+  plugins: [
+    require('@tailwindcss/forms')
+  ]
 };
