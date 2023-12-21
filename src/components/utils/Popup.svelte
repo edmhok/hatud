@@ -1,13 +1,16 @@
 <script>
-	import { beforeUpdate, afterUpdate, onDestroy } from 'svelte';
+	import { beforeUpdate, afterUpdate, onMount, onDestroy } from 'svelte';
 	let isOpen = false;
-	let openerMenu;
-	let popupBottomPosition;
+
 	onMount(() => {
 		addEventListener('click', closePopup);
 		return () => {
+			console.log('destroy from onMount called!');
 			removeEventListener('click', closePopup);
 		};
+	});
+	onDestroy(() => {
+		console.log('destroy from onDestroy called!');
 	});
 
 	beforeUpdate(() => {
@@ -23,7 +26,7 @@
 </script>
 
 <div class="flex-it">
-	<div bind:this={openerMenu} class="flex-it">
+	<div class="flex-it">
 		<button
 			on:click|stopPropagation={() => {
 				isOpen = true;
@@ -34,7 +37,6 @@
 	</div>
 	{#if isOpen}
 		<div
-			style="bottom: {popupBottomPosition}"
 			class="flex-it hover:cursor-pointer fixed bg-gray-800 text-white popup z-10 rounded-2xl border-gray-700 border transition duration-1000"
 		>
 			<div class="w-72 min-w-68 max-h-120 min-h-8 flex-it overflow-auto">
