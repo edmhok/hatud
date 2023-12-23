@@ -75,9 +75,9 @@
 	</div>
 	<!-- MESSENGER END -->
 </div>
-{JSON.stringify($documentBody)}
 isXL: {$isXl}
 isLg: {$isLg}
+
 <div class="h-px bg-gray-700 my-1" />
 
 {#each glides as glide (glide.id)}
