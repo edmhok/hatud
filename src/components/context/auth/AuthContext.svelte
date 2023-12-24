@@ -1,4 +1,5 @@
 <script>
+	import Loader from '@components/utils/Loader.svelte';
 	import { setContext } from 'svelte';
 	import { writable } from 'svelte/store';
 	import { key } from '.';
@@ -17,4 +18,13 @@
 	});
 </script>
 
-<slot />
+<!-- Just to subscribe so start function can be called -->
+<div style="display:none;">
+	{$isAuthenticated}
+</div>
+
+{#if $isLoading}
+	<Loader size={150} />
+{:else}
+	<slot />
+{/if}
