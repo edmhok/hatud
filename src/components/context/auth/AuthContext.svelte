@@ -9,7 +9,7 @@
 		setTimeout(() => {
 			set(false); // isAuthenticated setter
 			isLoading.set(false);
-		}, 2000);
+		}, 1000);
 	});
 
 	setContext(key, {

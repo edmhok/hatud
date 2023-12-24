@@ -7,6 +7,6 @@
 	}
 </script>
 
-{#if !isAuthenticated}
+{#if !$isAuthenticated}
 	<slot />
 {/if}

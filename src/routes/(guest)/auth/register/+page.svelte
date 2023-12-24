@@ -1,8 +1,10 @@
 <script>
+	import RegisterForm from '@components/forms/RegisterForm.svelte';
 	import AuthLayout from '@components/layouts/AuthLayout.svelte';
 </script>
 
 <AuthLayout title="Create Account">
+	<RegisterForm />
 	<form class="flex-it">
 		<div class="flex-it overflow-hidden sm:rounded-md">
 			<div class="flex-it">
