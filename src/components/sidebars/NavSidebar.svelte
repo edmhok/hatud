@@ -4,7 +4,7 @@
 	import TiSocialFlickr from 'svelte-icons/ti/TiSocialFlickr.svelte';
 	import TiBrush from 'svelte-icons/ti/TiBrush.svelte';
 	import { navLinks } from './navLinks';
-	const { isXl } = getUIContext();
+	const { isXl, loading } = getUIContext();
 </script>
 
 <header class="lg:flex-grow flex-it items-end">
@@ -47,7 +47,9 @@
 							<div
 								class="flex-it flex-row text-xl font-bold text-white items-start justify-center truncate duration-200"
 							>
-								{#if $isXl}
+								{#if $loading}
+									<div>...</div>
+								{:else if $isXl}
 									<div>Glide It</div>
 								{:else}
 									<div class="icon"><TiBrush /></div>
