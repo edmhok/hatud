@@ -48,8 +48,6 @@
 								class="flex-it flex-row text-xl font-bold text-white items-start justify-center truncate duration-200"
 							>
 								{#if $isXl}
-									<div>...</div>
-								{:else if $isXl}
 									<div>Glide It</div>
 								{:else}
 									<div class="icon"><TiBrush /></div>

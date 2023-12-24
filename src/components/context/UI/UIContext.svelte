@@ -1,8 +1,9 @@
 <script>
 	import { setContext, onMount } from 'svelte';
 	import { writable } from 'svelte/store';
-	import { key } from '.';
+	import { key } from './key';
 
+	let color = 'blue';
 	let isXl = writable(false);
 	let isLg = writable(false);
 
