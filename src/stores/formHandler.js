@@ -1,11 +1,7 @@
 import { writable } from "svelte/store";
 
-function createStore() {
-    const form = writable({})
-
-    function setForm(formData) {
-      form.set(formData);
-    }
+export function createFormStore(initialData) {
+    const form = writable(initialData);
 
     function validate(node, value) {
       console.log(node);
@@ -14,9 +10,7 @@ function createStore() {
   
     return {
         validate,
-        form,
-        setForm
+        form
     }
   }
   
-  export const formHandlerStore = createStore();

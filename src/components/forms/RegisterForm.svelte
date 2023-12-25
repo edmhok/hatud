@@ -1,15 +1,13 @@
 <script>
-	import { formHandlerStore } from '@stores/formHandler';
-	const { validate, form, setForm } = formHandlerStore;
-
-	const registerFormData = {
+	import { createFormStore } from '@stores/formHandler';
+	const { validate, form } = createFormStore({
 		fullName: '',
 		nickName: '',
 		email: '',
 		avatar: '',
 		password: '',
 		passwordConfirmation: ''
-	};
+	});
 
 	setForm(registerFormData);
 
