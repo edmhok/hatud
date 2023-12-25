@@ -5,7 +5,7 @@
 
 <AuthLayout title="Create Account">
 	<RegisterForm />
-	<form class="flex-it">
+	<!-- <form class="flex-it">
 		<div class="flex-it overflow-hidden sm:rounded-md">
 			<div class="flex-it">
 				<div class="flex-it">
@@ -94,5 +94,5 @@
 				</button>
 			</div>
 		</div>
-	</form>
+	</form> -->
 </AuthLayout>

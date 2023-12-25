@@ -4,8 +4,8 @@
       "baseUrl": ".",
       "paths": {
         "@components/*": ["./src/components/*"],
-        "$lib":["./src/lib"],
-        "$lib/*":["./src/lib/*"]
+        "@actions/*": ["./src/actions/*"],
+      "@stores/*": ["./src/stores/*"],
       },
      
     },

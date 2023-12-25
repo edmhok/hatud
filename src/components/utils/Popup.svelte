@@ -1,7 +1,7 @@
 <script>
 	import { afterUpdate, onMount } from 'svelte';
 	import Portal from './Portal.svelte';
-	import { clickOutside } from '@components/actions/clickOutside';
+	import { clickOutside } from '@actions/clickOutside';
 
 	let isOpen = false;
 	let openerMenu;
