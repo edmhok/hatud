@@ -5,13 +5,18 @@ export function createFormStore(initialData) {
   const form = writable(initialData);
 
   function validate(node) {
-    node.onblur = (e) => {
-      console.log(`blur on ${e.target.name} called with value ${e.target.value}`);
-    }
+    node.onblur = checkValidity();
+  }
 
-    node.oninput = (e) => {
-      console.log(`onInput on ${e.target.name} called with value ${e.target.value}`);
-    }
+  const checkValidity = () => () => {
+    const errorMessage = "ERROR ERROR ERROR!";
+    const isValid = true;
+
+    if (!isValid) {
+      alert(errorMessage);
+    } else {
+      alert("No Errors!");
+   }
   }
 
   return {
