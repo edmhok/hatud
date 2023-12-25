@@ -1,5 +1,5 @@
 <script>
-	import { createFormStore } from '@stores/formHandler';
+	import { createFormStore } from '@stores/createFormStore';
 	const { validate, form } = createFormStore({
 		fullName: '',
 		nickName: '',
