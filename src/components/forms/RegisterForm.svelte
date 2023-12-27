@@ -1,8 +1,9 @@
 <script>
 	import {
 		createFormStore,
-		maxLengthValidator,
-		firstUppercaseLetter
+		minLengthValidator,
+		firstUppercaseLetter,
+		requiredValidator
 	} from '@stores/createFormStore';
 	import FormErrors from './FormErrors.svelte';
 
@@ -28,7 +29,7 @@
 					<label for="fullName" class="block text-sm font-medium text-gray-700"> Full Name </label>
 					<input
 						bind:value={$form.fullName}
-						use:validate={[maxLengthValidator, firstUppercaseLetter]}
+						use:validate={[requiredValidator, minLengthValidator, firstUppercaseLetter]}
 						type="text"
 						name="fullName"
 						id="fullName"
@@ -41,7 +42,7 @@
 					<label for="nickName" class="block text-sm font-medium text-gray-700"> Nick Name </label>
 					<input
 						bind:value={$form.nickName}
-						use:validate={[maxLengthValidator, firstUppercaseLetter]}
+						use:validate={[requiredValidator, minLengthValidator, firstUppercaseLetter]}
 						type="text"
 						name="nickName"
 						id="nickName"
@@ -54,7 +55,7 @@
 					<label for="email" class="block text-sm font-medium text-gray-700"> Email </label>
 					<input
 						bind:value={$form.email}
-						use:validate
+						use:validate={[requiredValidator, minLengthValidator, firstUppercaseLetter]}
 						type="text"
 						name="email"
 						id="email"
@@ -66,7 +67,7 @@
 					<label for="avatar" class="block text-sm font-medium text-gray-700"> Avatar </label>
 					<input
 						bind:value={$form.avatar}
-						use:validate
+						use:validate={[requiredValidator, minLengthValidator, firstUppercaseLetter]}
 						type="text"
 						name="avatar"
 						id="avatar"
@@ -78,7 +79,7 @@
 					<label for="password" class="block text-sm font-medium text-gray-700"> Password </label>
 					<input
 						bind:value={$form.password}
-						use:validate
+						use:validate={[requiredValidator, minLengthValidator, firstUppercaseLetter]}
 						type="password"
 						name="password"
 						id="password"
@@ -92,7 +93,7 @@
 					</label>
 					<input
 						bind:value={$form.passwordConfirmation}
-						use:validate
+						use:validate={[requiredValidator, minLengthValidator, firstUppercaseLetter]}
 						type="password"
 						name="passwordConfirmation"
 						id="passwordConfirmation"
