@@ -1,6 +1,6 @@
-# create-svelte
+# Hatud
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+An express delivery app where you can choose option like messenger, to-do management.
 
 ## Creating a project
 
